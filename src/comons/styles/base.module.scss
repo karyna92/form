@@ -1,0 +1,123 @@
+@import './mixins';
+.formsContainer{   
+  box-sizing: border-box;
+  background-image: url(../img/pexels-tobiasbjorkli-2104152.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+  height: 90vh;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0);
+  margin: 0 auto;
+  position: relative;
+}
+.input {
+  width: 100%;
+  height: 3rem;
+  position: relative;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: 2px solid rgb(138, 138, 138);
+  margin-bottom: 8px;
+  color: white;
+  font-size: 1.2rem;
+}
+.label {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.hidden {
+  transition: 1s ease;
+  display: none;
+}
+.radioContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.radioLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input {
+    width: 20px;
+    height: 20px;
+  }
+  span {
+    width: 18%;
+    text-align: start;
+  }
+}
+.formContainer {
+  @include container;
+  background: rgba(63, 64, 65, 0.509);
+}
+.form {
+  @include form;
+}
+.inputParts {
+  display: flex;
+  gap: 2rem;
+}
+.checkboxText {
+  a {
+    color: rgb(155, 221, 250);
+  }
+}
+.submitBtn {
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.switcherContainer {
+  @include container;
+  background: rgba(133, 135, 138, 0.519);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon {
+  font-size: 3rem;
+}
+.quota {
+  padding: 20px;
+}
+.switchBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+}
+.input.valid {
+  border-color: rgba(65, 204, 214, 0.506);
+}
+
+.error {
+  color: rgb(245, 204, 0);
+}
+
+.notFound {
+ margin: 70px 10px 0;
+  width: 100%;
+  height: 90%;
+  background-image: url(../img/lost-traveler-illustration-download-in-svg-png-gif-file-formats--tourist-searching-location-finding-traveller-summer-holiday-pack-holidays-illustrations-6625667.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  
+}
+
+@media (max-width: 800px) {
+  .formsContainer{
+      flex-direction: column;
+      flex-wrap: nowrap;
+      font-size:17px;
+      margin:0;
+      overflow: hidden;
+  }
+}
