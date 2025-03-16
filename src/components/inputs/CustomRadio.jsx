@@ -1,7 +1,7 @@
-import classNames from 'classnames';
-import { Field } from 'formik';
-import PropTypes from 'prop-types';
-import styles from '../../comons/styles/base.module.scss';
+import classNames from "classnames";
+import { Field } from "formik";
+import PropTypes from "prop-types";
+import styles from "../../comons/styles/base.module.scss";
 
 const CustomRadio = ({ name, label, classes, options, ...restProps }) => {
   return (
@@ -13,9 +13,13 @@ const CustomRadio = ({ name, label, classes, options, ...restProps }) => {
         });
 
         return (
-          <div className={styles.radioContainer} role="group" aria-labelledby={`${name}-label`}>
+          <div
+            className={styles.radioContainer}
+            role="group"
+            aria-labelledby={`${name}-label`}
+          >
             <p>Join as a :</p>
-            {options.map(option => (
+            {options.map((option) => (
               <label key={option.value} className={styles.radioLabel}>
                 <input
                   type="radio"
@@ -24,7 +28,7 @@ const CustomRadio = ({ name, label, classes, options, ...restProps }) => {
                   className={inputClassNames}
                   {...restProps}
                 />
-               <span>{option.value}</span> 
+                <span>{option.value}</span>
               </label>
             ))}
           </div>

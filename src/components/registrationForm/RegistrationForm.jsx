@@ -1,24 +1,28 @@
-import { Formik, Form } from 'formik';
-import initialValuesRegistration from '../../constans/initialVal';
-import {registrationSchema} from '../../utils/validate/validationSchema'
-import CustomInput from '../inputs/CustomInput';
-import CustomCheckbox from '../inputs/CustomCheckbox';
-import CustomRadio from '../inputs/CustomRadio';
-import classes from '../../constans/classnames';
-import options from '../../constans/options';
-import styles from '../../comons/styles/base.module.scss'
+import { Formik, Form } from "formik";
+import initialValuesRegistration from "../../constans/initialVal";
+import { registrationSchema } from "../../utils/validate/validationSchema";
+import CustomInput from "../inputs/CustomInput";
+import CustomCheckbox from "../inputs/CustomCheckbox";
+import CustomRadio from "../inputs/CustomRadio";
+import classes from "../../constans/classnames";
+import options from "../../constans/options";
+import styles from "../../comons/styles/base.module.scss";
 
 const RegistrationForm = () => {
   const handleSubmit = (values, formikBag) => {
-    console.log('Submit form with values:', values);
+    console.log("Submit form with values:", values);
     formikBag.resetForm();
   };
 
   return (
-    <div className={styles.formContainer}>
+    <div>
       <h2>New traveler</h2>
       <h1>Explore your travel destinations</h1>
-      <Formik initialValues={initialValuesRegistration} validationSchema={registrationSchema} onSubmit={handleSubmit}>
+      <Formik
+        initialValues={initialValuesRegistration}
+        validationSchema={registrationSchema}
+        onSubmit={handleSubmit}
+      >
         {({ isSubmitting }) => (
           <Form className={styles.form}>
             <div className={styles.inputParts}>
@@ -85,4 +89,3 @@ const RegistrationForm = () => {
 };
 
 export default RegistrationForm;
-

@@ -1,5 +1,5 @@
-@import './mixins';
-.formsContainer{   
+@import "./mixins";
+.formsContainer {
   box-sizing: border-box;
   background-image: url(../img/pexels-tobiasbjorkli-2104152.jpg);
   background-size: cover;
@@ -9,7 +9,7 @@
   justify-content: space-around;
   height: 90vh;
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
   margin: 0 auto;
   position: relative;
 }
@@ -103,21 +103,23 @@
 }
 
 .notFound {
- margin: 70px 10px 0;
+  margin: 70px 10px 0;
   width: 100%;
-  height: 90%;
+  height: 80vh;
   background-image: url(../img/lost-traveler-illustration-download-in-svg-png-gif-file-formats--tourist-searching-location-finding-traveller-summer-holiday-pack-holidays-illustrations-6625667.png);
   background-repeat: no-repeat;
   background-position: bottom;
-  
 }
 
 @media (max-width: 800px) {
-  .formsContainer{
-      flex-direction: column;
-      flex-wrap: nowrap;
-      font-size:17px;
-      margin:0;
-      overflow: hidden;
+  .formsContainer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-size: 17px;
+    margin: 0;
+    overflow: hidden;
+  }
+  .formContainer {
+    width: 100%;
   }
 }

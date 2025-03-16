@@ -1,2 +1,2 @@
-const options=[{value:'traveler'},{value:'guide'}]
-export default options
+const options = [{ value: "traveler" }, { value: "guide" }];
+export default options;
